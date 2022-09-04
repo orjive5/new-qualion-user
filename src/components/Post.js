@@ -17,7 +17,7 @@ const Post = () => {
 
   const loadPosts = () => {
     axios
-      .get('http://localhost:8000/posts')
+      .get('https://qualion-blog.herokuapp.com/posts')
       .then(function (response) {
         const post = response.data.find((post) => post._id === postId);
         setPost(post);

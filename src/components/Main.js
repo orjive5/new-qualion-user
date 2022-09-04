@@ -12,7 +12,7 @@ const Main = ({ foundData, activeTag, setActiveTag, currentPage, setCurrentPage 
 
   const getAllData = () => {
     axios
-      .get('http://localhost:8000/posts')
+      .get('https://qualion-blog.herokuapp.com/posts')
       .then((res) => {
         const publishedPosts = res.data.filter((element) => element.isPublished).reverse();
         setAllData(publishedPosts);
