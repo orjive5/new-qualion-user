@@ -1,0 +1,165 @@
+.navbar {
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.qualion-banner {
+  height: 60px;
+  margin-inline: 50px;
+}
+
+.hamburger-menu:hover,
+.search-icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.search-icon,
+.hamburger-menu {
+  flex-shrink: 0;
+}
+
+.search-bar {
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.7);
+  font-size: 24px;
+  color: white;
+  margin-right: 1rem;
+}
+
+.nav-dropdown {
+  position: fixed;
+  left: 0;
+  max-height: 70vh;
+  background: rgba(22, 27, 45, 0.9);
+  z-index: 100;
+  display: flex;
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.nav-dropdown-simple {
+  position: fixed;
+  left: 220px;
+  width: 250px;
+  max-height: 70vh;
+  background: rgba(22, 27, 45, 0.9);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.menu-categories h1,
+.menu-pages h1 {
+  font-family: "DIN", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  border-bottom: 3px solid #111;
+  padding: 0 0 5px;
+  transition: 0.3s border-bottom;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-block: 25px;
+  width: 180px;
+}
+
+.menu-categories h1 {
+  margin-bottom: 0;
+}
+
+.menu-categories h1:hover,
+.menu-pages h1:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #00f;
+}
+
+.menu-categories h2 {
+  border-bottom: 1px solid #1c2441;
+  display: block;
+  padding: 7px 13px;
+  transition: 0.15s background;
+  color: white;
+  font-size: 14px;
+}
+
+.menu-categories h2:hover {
+  cursor: pointer;
+  background-color: #00f;
+  border-bottom: 1px solid transparent;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+  .search-input {
+    max-width: 200px;
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    padding: 0 1rem;
+  }
+
+  .search-bar {
+    margin-right: 0;
+  }
+
+  .search-input {
+    font-size: 1rem;
+  }
+
+  .qualion-banner {
+    display: none;
+  }
+
+  .nav-dropdown h1,
+  .nav-dropdown-simple h1 {
+    font-size: 12px;
+    width: 150px;
+  }
+
+  .nav-dropdown h2 {
+    font-size: 12px;
+  }
+
+  .nav-dropdown-simple {
+    left: 0;
+    width: auto;
+    padding: 0 1rem;
+  }
+
+  .nav-dropdown {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    padding-top: 0;
+  }
+}
